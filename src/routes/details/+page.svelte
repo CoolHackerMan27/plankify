@@ -50,9 +50,7 @@
 		<!-- Header -->
 		<div class="mb-8 flex items-center justify-between">
 			<div>
-				<h1 class="text-3xl font-bold tracking-tight">
-					Your Listening Stats
-				</h1>
+				<h1 class="text-3xl font-bold tracking-tight">Your Listening Stats</h1>
 				<p class="text-zinc-500">You have bad taste in music tbh</p>
 			</div>
 			<Button variant="outline" onclick={() => goto('/')}>← Back Home</Button>
@@ -164,9 +162,7 @@
 					<Card.Content>
 						<div class="space-y-3">
 							{#each detailed.slice(0, 15) as song, index}
-								<div
-									class="flex items-center justify-between rounded-lg bg-zinc-800 p-3"
-								>
+								<div class="flex items-center justify-between rounded-lg bg-zinc-800 p-3">
 									<div class="flex items-center gap-3">
 										<span
 											class="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-700 text-sm font-medium"
