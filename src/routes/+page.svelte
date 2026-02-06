@@ -3,7 +3,8 @@
 	import * as Card from '$lib/components/ui/card';
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
-	import logo from '$lib/assets/image.jpg';
+	import { resolve } from '$app/paths';
+	import logo from '$lib/assets/image.jpeg';
 
 	let isDragging = $state(false);
 	let fileInput: HTMLInputElement;
@@ -63,7 +64,7 @@
 
 		try {
 			sessionStorage.setItem('droppedFiles', JSON.stringify(allData));
-			goto(`${base}/details`, {});
+			goto(`${resolve('/details')}`, {});
 		} catch (err) {
 			console.error('Storage error:', err);
 			alert('Data is too large to store. Try uploading fewer files.');
@@ -102,7 +103,7 @@
 
 		<!-- Navigation -->
 		<div class="flex justify-center">
-			<Button variant="outline" href="{base}/about">About my site</Button>
+			<Button variant="outline" href={resolve('/about')}>About my site</Button>
 		</div>
 
 		<!-- Drop  -->
